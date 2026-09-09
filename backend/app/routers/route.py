@@ -7,11 +7,11 @@ router = APIRouter()
 
 @router.get("/search-city/:city")
 def get_city(city:str):
-    return
+    cities = open_meteo.get_list_city(city)
+    return open_meteo.get_details_of_city(cities)
 
 
-@router.get("/")
-def hello_world():
-    data1 = open_meteo.data1
-    # data = api_services.data
-    return data1
+# @router.get("/compares")
+# def hello_world():
+#     data1 = open_meteo.data1
+#     return data1
