@@ -42,3 +42,5 @@ def get_details_of_city(cities:list):
 
 
 
+
+

@@ -11,7 +11,7 @@ def get_city(city:str):
     return open_meteo.get_details_of_city(cities)
 
 
-# @router.get("/compares")
-# def hello_world():
-#     data1 = open_meteo.data1
-#     return data1
+@router.get("/compares")
+def hello_world(latitude:float, longitude:float, latitude2:float, longitude2:float):
+    cities = [{"latitude": latitude, "longitude": longitude}, {"latitude": latitude2, "longitude": longitude2}]
+    return open_meteo.get_details_of_city(cities)
